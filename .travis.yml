@@ -31,6 +31,6 @@ before_install:
 before_script:
 - npm run start:dev &
 - sleep 5
-script: cd test && rspec tests.spec
+script: cd test && bundle exec rspec tests.spec
 after_script:
 - echo 'Done!' 
