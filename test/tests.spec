@@ -11,6 +11,6 @@ context "tests" do
 
   it "should open the frontpage with an empty list" do
     @driver.navigate.to('http://localhost:8080')
-    expect(@driver.page_source.include?('Create your first todo.')).to be(true)
+    expect(@driver.page_source.include?('No TODOs found')).to be(true)
   end
 end
