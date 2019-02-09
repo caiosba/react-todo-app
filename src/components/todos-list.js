@@ -19,7 +19,7 @@ export default class TodosList extends React.Component {
     }
     render () {
         if (!this.props.todos.length) {
-            return <p className="tutorial">Create your first todo.</p>;
+            return <p className="tutorial">No TODOs found</p>;
         }
         return (
             <table>
