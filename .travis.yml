@@ -29,8 +29,8 @@ before_install:
 # ruby / bundler / rspec
 - cd test && bundle install --path=/tmp/bundler && cd -
 before_script:
-# - npm run start:dev &
-# - sleep 5
-# script: cd test && bundle exec rspec tests.spec
-# after_script:
-# - echo 'Done!' 
+- npm run start:dev &
+- sleep 5
+script: cd test && bundle exec rspec tests.spec
+after_script:
+- echo 'Done!' 
