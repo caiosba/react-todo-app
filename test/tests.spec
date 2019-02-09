@@ -8,4 +8,9 @@ context "tests" do
   before :each do |example|
     @driver = Selenium::WebDriver.for(:remote, url: 'http://localhost:9516')
   end
+
+  it "should open the frontpage with an empty list" do
+    @driver.navigate.to('http://localhost:8080')
+    expect(@driver.page_source.include?('Create your first todo.')).to be(true)
+  end
 end
